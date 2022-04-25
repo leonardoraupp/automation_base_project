@@ -1,0 +1,19 @@
+version: "2"
+services:
+  selenium_client:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/usr/src/myapp
+    depends_on:
+      - selenium_server_chrome
+      - selenium_server_firefox
+  selenium_server_firefox:
+    image: selenium/standalone-firefox:4.1.2-20220131
+    ports:
+      - "4443:4444"
+  selenium_server_chrome:
+    image: selenium/standalone-chrome:4.1.2-20220217
+    ports:
+      - "4444:4444"

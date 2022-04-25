@@ -1,0 +1,7 @@
+{
+  "urlTesting": "http://testing-app.assine.online/",
+  "urlHom": "https://staging-app.assine.online/",
+  "plataforma": "Windows",
+  "headless": false,
+  "docker": false
+}
